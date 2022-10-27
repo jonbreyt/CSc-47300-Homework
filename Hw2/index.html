@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Browser tab icon -->
+    <link rel="icon" href="images/calculator.png">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://pagecdn.io/lib/mathjs/11.0.1/math.min.js" crossorigin="anonymous"  ></script>    
+    <script src="https://pagecdn.io/lib/mathjs/11.0.1/math.js" crossorigin="anonymous"  ></script>
+    <script src="https://pagecdn.io/lib/mathjs/11.0.1/math.js.map" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js" integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <br/>
+    <div id="header">
+        <h2>CSc 47300 Calculator</h2>
+    </div>
+    <div id="calculator">
+        <form id="screen">
+            <input id="ans" type = "text" value = "" maxlength = "35" readonly></input>
+            <!-- <div id="previous"><span>0</span></div> -->
+        </form>
+        <div id="keys" class="keys">
+            <div class="row justify-content-md-center">
+                <button type="button" class="btn btn-secondary btn-sm" disabled>Deg</button>
+                <button type="button" id="fac" class="btn btn-secondary" onclick="factorial()">x!</button>
+                <button type="button" id="openpar"class="btn btn-secondary" onclick= "dispDigits('(')">(</button>
+                <button type="button" id="closedpar" class="btn btn-secondary" onclick="dispDigits(')')">)</button>
+                <button type="button" id="prcnt" class="btn btn-secondary" onclick="findPercent()">%</button>
+                <button type="button" id="clr" class="btn btn-secondary" onclick="clearAll()">AC</button>
+            </div>
+            <div class="row justify-content-md-center">
+                <button type="button" id="trig" class="btn btn-secondary" onclick="sinFunction()">sin</button>
+                <button type="button" id="natl" class="btn btn-secondary" onclick="naturalLog()">ln</button>
+                <button type="button" id="num" class="btn btn-secondary" onclick="dispDigits(7)">7</button>
+                <button type="button" id="num" class="btn btn-secondary" onclick="dispDigits(8)">8</button>
+                <button type="button" id="num" class="btn btn-secondary" onclick="dispDigits(9)">9</button>
+                <button type="button" id="divide" class="btn btn-secondary" onclick="division()">÷</button>
+            </div>
+            <div class="row justify-content-md-center">
+                <button type="button" id="trig" class="btn btn-secondary" onclick="cosFunction()">cos</button>
+                <button type="button" id="log" class="btn btn-secondary" onclick="logarithm()">log</button>
+                <button type="button" id="num" class="btn btn-secondary" onclick="dispDigits(4)">4</button>
+                <button type="button" id="num" class="btn btn-secondary" onclick="dispDigits(5)">5</button>
+                <button type="button" id="num" class="btn btn-secondary" onclick="dispDigits(6)">6</button>
+                <button type="button" id="multiply" class="btn btn-secondary" onclick="multiplication()">&#215;</button>
+            </div>
+            <div class="row justify-content-md-center">
+                <button type="button" id="trig" class="btn btn-secondary" onclick="tanFunction()">tan</button>
+                <button type="button" id="sqrt" class="btn btn-secondary" onclick="squareRoot()">&#8730;</button>
+                <button type="button" id="num" class="btn btn-secondary" onclick="dispDigits(1)">1</button>
+                <button type="button" id="num" class="btn btn-secondary" onclick="dispDigits(2)">2</button>
+                <button type="button" id="num" class="btn btn-secondary" onclick="dispDigits(3)">3</button>
+                <button type="button" id="minus" class="btn btn-secondary" onclick="subtraction()">-</button>
+            </div>
+            <div class="row justify-content-md-center">
+                <button type="button" class="btn btn-secondary" onclick="exp()">EXP</button>
+                <button type="button" class="btn btn-secondary" onclick="xToPowerOfY()">x<sup>y</sup></button>
+                <button type="button" id="num" class="btn btn-secondary" onclick="dispDigits(0)">0</button>
+                <button type="button" id="num" class="btn btn-secondary" onclick="decimalPoint()">.</button>
+                <button type="button" id="equals" class="btn btn-primary" onclick="resultEqualsTo()">=</button>
+                <button type="button" id="add" class="btn btn-secondary" onclick="addition()">+</button>
+            </div>
+        </div>
+    </div> 
+    <footer>
+        <img src="images/icons8-leaf-15.png"> By: Jacob Onbreyt CSc 47300 CCNY
+    </footer>
+    <script language="javascript" src="script.js"></script>
+</body>
+</html>
