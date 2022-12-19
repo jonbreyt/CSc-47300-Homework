@@ -1,0 +1,95 @@
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+
+.header{
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+#calculator{
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    text-align: center;
+    width: 550px;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: #000000;
+    padding: 8px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#screen{
+    background: #ffff;
+    padding: 8px;
+    margin: 16px 12px 10px 16px;
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+    border-radius: 8px;
+    border: 1px solid #70757a;
+    box-shadow: inset 5px 5px 5px rgb(0 0 0 / 10%), inset -5px -5px 5px rgb(0 0 0 / 10%)
+}
+
+#previous{
+  font-size: 20px;
+  text-align: right;
+  background-color: transparent;
+  border-color: transparent;
+  width: 480px;
+}
+
+#ans{
+    font-size: 33px;
+    text-align: right;
+    width: 480px;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.keys{
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.keys .row button {
+    width: 81px;
+    margin: 2px;
+    font-weight: 500;
+    color: #202124;
+}
+
+#num{
+    background-color: #f1f3f4;
+    border-color: #f1f3f4;
+}
+
+#num:hover{
+    color: #202124;
+    background-color: #dbdcdd;
+}
+
+.keys .row .btn-secondary{
+    background-color: #dadce0;
+    border-color: #dadce0;
+}
+
+.keys .row .btn-primary{
+    color:#f1f3f4;
+}
+
+#note{
+    text-align: center;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+footer{
+    position: fixed;
+    background: #f2f2f2;
+    padding: 20px 23px;
+    color: #0c0b0b;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Roboto',arial, sans-serif;
+}
